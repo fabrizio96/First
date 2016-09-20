@@ -1,0 +1,26 @@
+
+
+
+
+
+private static DatabaseHelper sHelper;
+private static ReentrantLock sLock = new ReentrantLock();
+
+
+public static DatabaseHelper get() {
+    if (sHelper == null) {
+        sLock.lock();
+        try {
+            if (sHelper == null) {
+                sHelper = new DatabaseHelper(App.getContext());
+            }
+        } finally {
+            sLock.unlock();
+        }
+    }
+    return sHelper;
+}
+which you can used
+public static List<Group> getGroups() throws SQLException {
+
+    return get().getGroupDao().queryForAll();

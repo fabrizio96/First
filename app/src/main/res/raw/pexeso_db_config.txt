@@ -1,0 +1,29 @@
+#
+# generated on 2016/09/20 01:45:32
+#
+# --table-start--
+dataClass=com.example.user.first.Database.Entity.Group
+tableName=group
+# --table-fields-start--
+# --field-start--
+fieldName=id
+columnName=id
+generatedId=true
+indexName=group_id_idx
+allowGeneratedIdInsert=true
+# --field-end--
+# --field-start--
+fieldName=first
+# --field-end--
+# --field-start--
+fieldName=second
+# --field-end--
+# --field-start--
+fieldName=result
+# --field-end--
+# --field-start--
+fieldName=operation
+# --field-end--
+# --table-fields-end--
+# --table-end--
+#################################
